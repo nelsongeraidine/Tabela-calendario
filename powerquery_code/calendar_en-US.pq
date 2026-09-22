@@ -180,7 +180,10 @@ let
     // =====================================================
     // BASE DATE TABLE
     // =====================================================
-    DateList = List.Dates(StartDate, Duration.Days(EndDate - StartDate) + 1, #duration(1, 0, 0, 0)),
+    // "RangeCheck" is referenced here on purpose: M steps are lazy, so
+    // without this reference the validation would never be evaluated and
+    // the StartDate > EndDate error would never fire.
+    DateList = if RangeCheck then List.Dates(StartDate, Duration.Days(EndDate - StartDate) + 1, #duration(1, 0, 0, 0)) else null,
     BaseTable = Table.TransformColumnTypes(
         Table.FromList(DateList, Splitter.SplitByNothing(), {"Date"}),
         {{"Date", type date}}

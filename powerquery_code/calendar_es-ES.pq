@@ -138,7 +138,10 @@ let
     // =====================================================
     // TABLA BASE DE FECHAS
     // =====================================================
-    ListaFechas = List.Dates(StartDate, Duration.Days(EndDate - StartDate) + 1, #duration(1, 0, 0, 0)),
+    // "ComprobacionRango" se referencia aquí a propósito: en M los pasos son
+    // perezosos, así que sin esta referencia la validación nunca se
+    // evaluaría y el error de StartDate > EndDate nunca se dispararía.
+    ListaFechas = if ComprobacionRango then List.Dates(StartDate, Duration.Days(EndDate - StartDate) + 1, #duration(1, 0, 0, 0)) else null,
     TablaBase = Table.TransformColumnTypes(
         Table.FromList(ListaFechas, Splitter.SplitByNothing(), {"Date"}),
         {{"Date", type date}}

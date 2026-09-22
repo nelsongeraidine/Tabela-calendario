@@ -148,7 +148,10 @@ let
     // =====================================================
     // TABELA BASE DE DATAS
     // =====================================================
-    ListaDatas = List.Dates(StartDate, Duration.Days(EndDate - StartDate) + 1, #duration(1, 0, 0, 0)),
+    // "VerificacaoIntervalo" é referenciada aqui de propósito: em M as
+    // etapas são preguiçosas, então sem essa referência a validação nunca
+    // seria avaliada e o erro de StartDate > EndDate nunca dispararia.
+    ListaDatas = if VerificacaoIntervalo then List.Dates(StartDate, Duration.Days(EndDate - StartDate) + 1, #duration(1, 0, 0, 0)) else null,
     TabelaBase = Table.TransformColumnTypes(
         Table.FromList(ListaDatas, Splitter.SplitByNothing(), {"Date"}),
         {{"Date", type date}}

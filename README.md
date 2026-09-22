@@ -43,7 +43,7 @@ Nomes de coluna são **idênticos nos 3 arquivos** (em inglês), para que qualqu
 
 Depois de carregar, para cada coluna de texto abaixo, selecione-a → aba **Estrutura da Tabela/Column tools** → **Classificar por Coluna**:
 
-`MonthName`/`MonthNameShort` → `MonthNumber` · `YearMonth` → `YearMonthNumber` · `QuarterName` → `QuarterNumber` · `YearQuarter` → `YearQuarterNumber` · `SemesterName` → `SemesterNumber` · `YearSemester` → `YearSemesterNumber` · `DayOfWeekName`/`DayOfWeekNameShort` → `DayOfWeekNumber` · `ISOYearWeek` → `ISOYearWeekNumber` · `Season` → `SeasonNumber`
+`MonthName`/`MonthNameShort` → `MonthNumber` · `MonthYear`/`MonthYearShort` → `YearMonthNumber` · `YearMonth` → `YearMonthNumber` · `QuarterName` → `QuarterNumber` · `YearQuarter` → `YearQuarterNumber` · `SemesterName` → `SemesterNumber` · `YearSemester` → `YearSemesterNumber` · `DayOfWeekName`/`DayOfWeekNameShort` → `DayOfWeekNumber` · `ISOYearWeek` → `ISOYearWeekNumber` · `Season` → `SeasonNumber`
 
 ## Feriados incluídos
 
