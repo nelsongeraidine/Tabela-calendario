@@ -1,6 +1,6 @@
 # Dimensão Calendário para Power BI (Power Query / M)
 
-Data de Atualização: 22-09-2026_Versão 1.00
+Data de Atualização: 22-09-2026_Versão 1.01
 
 Três tabelas de calendário prontas para uso em Power BI, uma por idioma/localidade: **pt-BR**, **en-US**, **es-ES**. 100% offline (nenhuma chamada externa, nenhuma API, nenhum arquivo); feriados calculados pelo próprio código.
 
