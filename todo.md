@@ -1,6 +1,6 @@
 # TODO — Dimensão Calendário
 
-Data de Atualização: 22-09-2026_Versão 2.01
+Data de Atualização: 23-09-2026_Versão 2.02
 
 Escopo simplificado em 22-09-2026 (ver `PRD.md`). O plano de fases do `docs/prompt_calendar_library_claude_code.md` (build.py, oráculo, golden files) não foi seguido; abaixo está o que foi feito de fato.
 
@@ -19,6 +19,10 @@ Escopo simplificado em 22-09-2026 (ver `PRD.md`). O plano de fases do `docs/prom
 - [x] `git init` + branch `feature/calendar-library-v1` + branch `main`; remoto configurado e ambas as branches sincronizadas em https://github.com/nelsongeraidine/Tabela-calendario.
 - [x] Corrigido bug real: a validação `StartDate > EndDate` nunca era avaliada (M é preguiçoso, nada referenciava a variável de checagem) — agora referenciada na construção da lista de datas, forçando o erro a disparar quando aplicável.
 - [x] README: adicionadas `MonthYear`/`MonthYearShort` à lista de colunas que precisam de "Classificar por coluna" (senão ordenam alfabeticamente em vez de cronologicamente).
+- [x] Teste real no Power BI Desktop confirmado pelo usuário: carga funcionou.
+- [x] Esclarecido para o usuário: `EndDate` é ancorado em `AsOfDate` (hoje), não em `StartDate` — `FutureYears` conta a partir do ano corrente. Sem alteração de código (usuário optou por ajustar `FutureYears` manualmente se precisar).
+- [x] Esclarecido para o usuário: nomes de coluna ficam em inglês nas 3 versões por design (portabilidade de medidas DAX entre localidades); só os valores são localizados. Sem alteração de código.
+- [x] README: adicionado glossário completo das 59 colunas (tipo, descrição, exemplo), agrupado pelas mesmas seções do resumo.
 
 ## Pendente (não pedido, mas útil se quiser evoluir depois)
 
